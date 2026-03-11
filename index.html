@@ -25,11 +25,23 @@
 html { font-size: 13.5px; }
 
 body {
-  background: var(--white);
+  background: #e0e0e0;
   color: var(--text);
   font-family: 'Jost', sans-serif;
   font-weight: 300;
   line-height: 1.65;
+}
+
+.cv-wrap {
+  max-width: 960px;
+  margin: 32px auto;
+  background: var(--white);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+@media (max-width: 1040px) {
+  .cv-wrap { margin: 0 auto; box-shadow: none; }
 }
 
 /* ── HEADER ── */
@@ -496,6 +508,7 @@ body {
 <body>
 
 <!-- HEADER -->
+<div class="cv-wrap">
 <header class="header">
   <div>
     <div class="header-name">Laura Rosa<br><em>Díaz Cañas</em></div>
@@ -813,6 +826,7 @@ body {
   <div class="footer-sig">Rose Days</div>
   <div class="footer-note">Available for hybrid roles &nbsp;·&nbsp; Barcelona based &nbsp;·&nbsp; Open to remote</div>
 </footer>
+</div>
 
 </body>
 </html>
