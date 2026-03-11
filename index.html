@@ -134,12 +134,19 @@ body {
 /* ── PROPOSITION ── */
 .proposition {
   background: var(--lavender-light);
-  padding: 52px 72px;
+  padding: 52px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 72px;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 48px;
   align-items: center;
-  border-bottom: 1px solid var(--border);
 }
 
 .prop-label {
@@ -498,6 +505,44 @@ body {
   text-transform: uppercase;
 }
 
+
+/* ── TOOLS BAND (full width) ── */
+.tools-band {
+  background: var(--black);
+  padding: 28px 0;
+}
+
+.tools-band-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 72px;
+  box-sizing: border-box;
+}
+
+.tools-band .tools-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lavender);
+  margin-bottom: 14px;
+}
+
+.tools-band .tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tools-band .tool-chip {
+  background: #1a1a1a;
+  color: var(--lavender-light);
+  font-size: 10.5px;
+  padding: 5px 12px;
+  letter-spacing: 0.04em;
+  border: 1px solid #333;
+}
+
 /* ── PRINT ── */
 @media print {
   .header, .tools-box, .marquee-strip, .checker-divider, .footer,
@@ -526,7 +571,7 @@ body {
     <p class="header-subtitle">Creative AI Director &nbsp;·&nbsp; Brand Architect &nbsp;·&nbsp; System Builder</p>
   </div>
   <div class="header-right">
-    <div class="contact-line"><span class="c-dot"></span><a href="/cdn-cgi/l/email-protection#167a7763647738727f776c757756717b777f7a3875797b"><span class="__cf_email__" data-cfemail="204c415552410e4449415a434160474d41494c0e434f4d">[email&#160;protected]</span></a></div>
+    <div class="contact-line"><span class="c-dot"></span><a href="mailto:laura.diazca@gmail.com">laura.diazca@gmail.com</a></div>
     <div class="contact-line"><span class="c-dot"></span><a href="tel:+34604187994">(+34) 604 187 994</a></div>
     <div class="contact-line"><span class="c-dot"></span><a href="https://rosedays.myportfolio.com" target="_blank">rosedays.myportfolio.com</a></div>
     <div class="contact-line"><span class="c-dot"></span><a href="https://linkedin.com/in/rosedays" target="_blank">linkedin / rosedays</a></div>
@@ -543,16 +588,36 @@ body {
 </div>
 
 <!-- PROPOSITION -->
-<div class="cv-wrap">
-<section class="proposition">
+<section class="proposition"><div class="section-inner">
   <div class="prop-label">Hello,<br><em>I'm Rose</em></div>
   <p class="prop-text">
     I design <strong>creative systems that scale</strong>, bridging AI-generated media, brand strategy, and performance creative. With hands-on command of generative image, video, and LLM tools, I build production pipelines that deliver brand-consistent, high-velocity content across channels. Currently expanding into <strong>vibe coding</strong> (Claude, Lovable, Replit), building functional solutions for real client and team pain points, bringing a product mindset to the creative stack. I've led multi-market creative operations for EdTech, lifestyle, and design brands, always at the intersection of <strong>storytelling, technology, and measurable impact</strong>.
   </p>
-</section>
+</div></section>
+
+<!-- TOOLS BAND -->
+<div class="tools-band">
+  <div class="tools-band-inner">
+    <div class="tools-label">AI &amp; Creative Tools</div>
+    <div class="tools-grid">
+      <div class="tool-chip">Midjourney</div>
+      <div class="tool-chip">Flora AI</div>
+      <div class="tool-chip">Runway · Kling</div>
+      <div class="tool-chip">Seedance</div>
+      <div class="tool-chip">Nanobanner</div>
+      <div class="tool-chip">Higgsfield</div>
+      <div class="tool-chip">Adobe Firefly</div>
+      <div class="tool-chip">Figma</div>
+      <div class="tool-chip">Claude · ChatGPT</div>
+      <div class="tool-chip">Perplexity</div>
+      <div class="tool-chip">AI Agents</div>
+      <div class="tool-chip">Vibe Coding</div>
+    </div>
+  </div>
+</div>
 
 <!-- BODY -->
-<div class="body-wrap">
+<div class="cv-wrap"><div class="body-wrap">
 
   <main class="main-col">
 
@@ -716,24 +781,6 @@ body {
       <span class="pl-url">rosedays.myportfolio.com ↗</span>
     </a>
 
-    <div class="tools-box">
-      <div class="tools-label">AI &amp; Creative Tools</div>
-      <div class="tools-grid">
-        <div class="tool-chip">Midjourney</div>
-        <div class="tool-chip">Flora AI</div>
-        <div class="tool-chip">Runway · Kling</div>
-        <div class="tool-chip">Seedance</div>
-        <div class="tool-chip">Nanobanner</div>
-        <div class="tool-chip">Higgsfield</div>
-        <div class="tool-chip">Adobe Firefly</div>
-        <div class="tool-chip">Figma</div>
-        <div class="tool-chip">Claude · ChatGPT</div>
-        <div class="tool-chip">Perplexity</div>
-        <div class="tool-chip">AI Agents</div>
-        <div class="tool-chip">Vibe Coding</div>
-      </div>
-    </div>
-
     <div class="sb-section">
       <div class="sb-title">Awards <em>&amp; Recognition</em></div>
 
@@ -830,6 +877,7 @@ body {
   </aside>
 </div>
 
+</div>
 </div>
 
 <!-- CHECKERBOARD DIVIDER -->
