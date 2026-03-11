@@ -45,13 +45,21 @@ body {
 }
 
 /* ── HEADER ── */
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 72px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: end;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .header {
   background: var(--black);
-  padding: 64px 72px 56px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: end;
+  padding: 64px 0 56px;
 }
 
 .header-name {
@@ -466,10 +474,17 @@ body {
 /* ── FOOTER ── */
 .footer {
   background: var(--black);
-  padding: 28px 72px;
+  padding: 28px 0;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .footer-sig {
@@ -508,19 +523,19 @@ body {
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header"><div class="header-inner">
   <div>
     <div class="header-name">Laura Rosa<br><em>Díaz Cañas</em></div>
     <p class="header-subtitle">Creative AI Director &nbsp;·&nbsp; Brand Architect &nbsp;·&nbsp; System Builder</p>
   </div>
   <div class="header-right">
-    <div class="contact-line"><span class="c-dot"></span><a href="/cdn-cgi/l/email-protection#3458554146551a505d554e5755745359555d581a575b59"><span class="__cf_email__" data-cfemail="f09c91858291de9499918a9391b0979d91999cde939f9d">[email&#160;protected]</span></a></div>
+    <div class="contact-line"><span class="c-dot"></span><a href="/cdn-cgi/l/email-protection#167a7763647738727f776c757756717b777f7a3875797b"><span class="__cf_email__" data-cfemail="204c415552410e4449415a434160474d41494c0e434f4d">[email&#160;protected]</span></a></div>
     <div class="contact-line"><span class="c-dot"></span><a href="tel:+34604187994">(+34) 604 187 994</a></div>
     <div class="contact-line"><span class="c-dot"></span><a href="https://rosedays.myportfolio.com" target="_blank">rosedays.myportfolio.com</a></div>
     <div class="contact-line"><span class="c-dot"></span><a href="https://linkedin.com/in/rosedays" target="_blank">linkedin / rosedays</a></div>
     <div class="contact-line" style="margin-top:4px;padding-left:14px;font-size:10.5px;color:#555;letter-spacing:0.08em;">Barcelona, Spain</div>
   </div>
-</header>
+</div></header>
 
 <!-- MARQUEE -->
 <div class="marquee-strip">
@@ -826,8 +841,4 @@ body {
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-sig">Rose Days</div>
-  <div class="footer-note">Available for hybrid roles &nbsp;·&nbsp; Barcelona based &nbsp;·&nbsp; Open to remote</div>
-</footer>
-
-</body>
-</html>
+  <div
