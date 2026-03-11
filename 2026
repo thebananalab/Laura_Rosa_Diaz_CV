@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laura Rosa Díaz Cañas — Creative AI Director</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --black:   #0d0d0d;
+  --offblack: #1a1a1a;
+  --white:   #ffffff;
+  --offwhite: #f9f9f9;
+  --lavender: #c9c3e8;
+  --lavender-light: #e8e5f5;
+  --lavender-mid: #b8b0e0;
+  --gray: #f2f2f2;
+  --muted: #888888;
+  --border: #e0e0e0;
+  --text: #1a1a1a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 13.5px; }
+
+body {
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--black);
+  padding: 64px 72px 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+}
+
+.header-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 76px;
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.header-name em {
+  font-style: italic;
+  color: var(--lavender);
+}
+
+.header-subtitle {
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 20px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.contact-line {
+  font-size: 11.5px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.02em;
+}
+
+.contact-line a { color: #aaa; text-decoration: none; border-bottom: 1px solid #333; transition: color 0.2s, border-color 0.2s; }
+.contact-line a:hover { color: var(--lavender); border-color: var(--lavender); }
+
+.c-dot {
+  width: 4px; height: 4px;
+  background: var(--lavender);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── MARQUEE ── */
+.marquee-strip {
+  background: var(--lavender);
+  padding: 11px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--black);
+  letter-spacing: 0.05em;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── PROPOSITION ── */
+.proposition {
+  background: var(--lavender-light);
+  padding: 52px 72px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 48px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.prop-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: italic;
+  color: #888;
+  line-height: 1.2;
+}
+
+.prop-text {
+  font-size: 13.5px;
+  font-weight: 300;
+  color: var(--offblack);
+  line-height: 1.9;
+  max-width: 620px;
+}
+
+.prop-text strong { font-weight: 600; color: var(--black); }
+
+/* ── BODY ── */
+.body-wrap {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+}
+
+.main-col {
+  padding: 56px 56px 72px 72px;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar {
+  padding: 56px 36px 72px;
+  background: var(--offwhite);
+}
+
+/* ── SECTION HEADER ── */
+.section { margin-bottom: 52px; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--black);
+  margin-bottom: 28px;
+}
+
+.section-num {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--black);
+  line-height: 1;
+}
+
+.section-title em { font-style: italic; color: var(--lavender-mid); }
+
+/* ── JOBS ── */
+.job {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 3px;
+}
+
+.job-company {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.job-period {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.job-role {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lavender-mid);
+  margin-bottom: 12px;
+}
+
+.job-bullets { list-style: none; }
+
+.job-bullets li {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.75;
+  margin-bottom: 5px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.job-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--lavender-mid);
+  font-size: 11px;
+  top: 1px;
+}
+
+.job-bullets li strong { font-weight: 600; color: var(--black); }
+
+/* ── SKILL TAGS ── */
+.skill-group { margin-bottom: 18px; }
+
+.skill-group-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag {
+  font-size: 10px;
+  font-weight: 400;
+  padding: 5px 11px;
+  background: var(--white);
+  color: var(--text);
+  border: 1px solid var(--border);
+  letter-spacing: 0.03em;
+  transition: all 0.2s;
+}
+
+.tag:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+
+.tag.filled {
+  background: var(--lavender);
+  color: var(--black);
+  border-color: var(--lavender);
+  font-weight: 500;
+}
+
+/* ── SIDEBAR TITLE ── */
+.sb-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--black);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--black);
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.sb-title em { font-style: italic; color: var(--lavender-mid); }
+
+.sb-section { margin-bottom: 32px; }
+
+/* ── PORTFOLIO LINK ── */
+.portfolio-link {
+  display: block;
+  background: var(--black);
+  padding: 18px 20px;
+  text-align: left;
+  margin-bottom: 28px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.portfolio-link:hover { background: var(--lavender-mid); }
+
+.pl-label {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pl-url {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--white);
+}
+
+/* ── AMBASSADOR STRIP ── */
+.amb-box {
+  background: var(--lavender-light);
+  padding: 16px 18px;
+  margin-bottom: 28px;
+  border: 1px solid var(--lavender);
+}
+
+.amb-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lavender-mid);
+  margin-bottom: 10px;
+}
+
+.amb-list { display: flex; flex-direction: column; gap: 5px; }
+
+.amb-item {
+  font-size: 11.5px;
+  color: var(--offblack);
+  padding-left: 10px;
+  border-left: 2px solid var(--lavender-mid);
+  font-weight: 400;
+}
+
+/* ── TOOLS BOX ── */
+.tools-box {
+  background: var(--black);
+  padding: 20px 18px;
+  margin-bottom: 28px;
+}
+
+.tools-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lavender);
+  margin-bottom: 14px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.tool-chip {
+  font-size: 10px;
+  color: #bbb;
+  background: rgba(255,255,255,0.05);
+  padding: 5px 8px;
+  border-left: 2px solid rgba(201,195,232,0.4);
+  letter-spacing: 0.03em;
+}
+
+/* ── AWARDS ── */
+.award-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.award-item:last-child { border-bottom: none; }
+
+.award-dot {
+  width: 6px; height: 6px;
+  background: var(--lavender);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.award-text { font-size: 11.5px; color: #555; line-height: 1.5; }
+.award-text strong { display: block; color: var(--black); font-weight: 600; font-size: 12px; }
+
+/* ── EDUCATION ── */
+.edu-item {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.edu-school {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.edu-degree { font-size: 11px; color: #555; line-height: 1.5; }
+.edu-year { font-size: 10px; color: var(--lavender-mid); font-weight: 600; letter-spacing: 0.06em; }
+
+/* ── LANGUAGES ── */
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+
+.lang-row:last-child { border-bottom: none; }
+.lang-name { color: var(--black); font-weight: 400; }
+.lang-lvl { color: var(--muted); font-size: 10.5px; letter-spacing: 0.06em; }
+
+/* ── CHECKERBOARD DIVIDER ── */
+.checker-divider {
+  height: 20px;
+  background-image: repeating-conic-gradient(var(--black) 0% 25%, var(--lavender-light) 0% 50%);
+  background-size: 20px 20px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--black);
+  padding: 28px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-sig {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 30px;
+  color: var(--lavender);
+}
+
+.footer-note {
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── PRINT ── */
+@media print {
+  .header, .tools-box, .marquee-strip, .checker-divider, .footer,
+  .amb-box, .portfolio-link { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .tag.filled { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media (max-width: 720px) {
+  .header { grid-template-columns: 1fr; padding: 40px 28px; }
+  .header-name { font-size: 52px; }
+  .proposition { grid-template-columns: 1fr; padding: 36px 28px; }
+  .body-wrap { grid-template-columns: 1fr; }
+  .main-col { padding: 36px 28px; border-right: none; }
+  .sidebar { padding: 36px 28px; }
+  .footer { padding: 24px 28px; flex-direction: column; gap: 10px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div>
+    <div class="header-name">Laura Rosa<br><em>Díaz Cañas</em></div>
+    <p class="header-subtitle">Creative AI Director &nbsp;·&nbsp; Brand Architect &nbsp;·&nbsp; System Builder</p>
+  </div>
+  <div class="header-right">
+    <div class="contact-line"><span class="c-dot"></span><a href="/cdn-cgi/l/email-protection#3458554146551a505d554e5755745359555d581a575b59"><span class="__cf_email__" data-cfemail="f09c91858291de9499918a9391b0979d91999cde939f9d">[email&#160;protected]</span></a></div>
+    <div class="contact-line"><span class="c-dot"></span><a href="tel:+34604187994">(+34) 604 187 994</a></div>
+    <div class="contact-line"><span class="c-dot"></span><a href="https://rosedays.myportfolio.com" target="_blank">rosedays.myportfolio.com</a></div>
+    <div class="contact-line"><span class="c-dot"></span><a href="https://linkedin.com/in/rosedays" target="_blank">linkedin / rosedays</a></div>
+    <div class="contact-line" style="margin-top:4px;padding-left:14px;font-size:10.5px;color:#555;letter-spacing:0.08em;">Barcelona, Spain</div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    AI Content Production &nbsp;✦&nbsp; Creative Direction &nbsp;✦&nbsp; Brand Strategy &nbsp;✦&nbsp; Generative Video &nbsp;✦&nbsp; Vibe Coding &nbsp;✦&nbsp; AI Agents &nbsp;✦&nbsp; Performance Creative &nbsp;✦&nbsp; Visual Storytelling &nbsp;✦&nbsp; Creative Systems &nbsp;✦&nbsp; Brand Identity &nbsp;✦&nbsp; Art Direction &nbsp;✦&nbsp; Midjourney &nbsp;✦&nbsp; Runway &nbsp;✦&nbsp; Flora AI &nbsp;✦&nbsp; Higgsfield &nbsp;✦&nbsp;&nbsp;
+    AI Content Production &nbsp;✦&nbsp; Creative Direction &nbsp;✦&nbsp; Brand Strategy &nbsp;✦&nbsp; Generative Video &nbsp;✦&nbsp; Vibe Coding &nbsp;✦&nbsp; AI Agents &nbsp;✦&nbsp; Performance Creative &nbsp;✦&nbsp; Visual Storytelling &nbsp;✦&nbsp; Creative Systems &nbsp;✦&nbsp; Brand Identity &nbsp;✦&nbsp; Art Direction &nbsp;✦&nbsp; Midjourney &nbsp;✦&nbsp; Runway &nbsp;✦&nbsp; Flora AI &nbsp;✦&nbsp; Higgsfield &nbsp;✦&nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- PROPOSITION -->
+<section class="proposition">
+  <div class="prop-label">Hello,<br><em>I'm Rose</em></div>
+  <p class="prop-text">
+    I design <strong>creative systems that scale</strong>, bridging AI-generated media, brand strategy, and performance creative. With hands-on command of generative image, video, and LLM tools, I build production pipelines that deliver brand-consistent, high-velocity content across channels. Currently expanding into <strong>vibe coding</strong> (Claude, Lovable, Replit), building functional solutions for real client and team pain points, bringing a product mindset to the creative stack. I've led multi-market creative operations for EdTech, lifestyle, and design brands, always at the intersection of <strong>storytelling, technology, and measurable impact</strong>.
+  </p>
+</section>
+
+<!-- BODY -->
+<div class="body-wrap">
+
+  <main class="main-col">
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Professional <em>Experience</em></h2>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">EducaHub.ai / EducaEdTech R&amp;D</span>
+          <span class="job-period">2024 – Present</span>
+        </div>
+        <div class="job-role">Brand &amp; Digital Manager</div>
+        <ul class="job-bullets">
+          <li>Led brand and UX direction for an EdTech marketplace operating across <strong>9 international markets and 7 languages</strong>, designing scalable content systems that maintained visual and tonal consistency at scale.</li>
+          <li>Built and managed <strong>AI-assisted creative production workflows</strong> to accelerate visual asset output while maintaining brand standards across all channels.</li>
+          <li>Redesigned Shopify marketplace architecture, improving UX structure, visual consistency, and brand alignment across all markets.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">The Wow Effect Company / DOIY &amp; Eat My Socks</span>
+          <span class="job-period">2024 – Present</span>
+        </div>
+        <div class="job-role">Social &amp; Content Manager</div>
+        <ul class="job-bullets">
+          <li>Led multi-channel content strategy (social, email, paid, owned) for DOIY and Eat My Socks, achieving <strong>+35% engagement growth in 6 months</strong>.</li>
+          <li>Directed cross-functional creative teams and external partners to deliver cohesive brand assets.</li>
+          <li>Defined content pillars and brand voice based on market trends and audience insights.</li>
+          <li>Ensured brand alignment across e-commerce (Shopify), marketplaces, and campaign channels.</li>
+          <li>Managed Meta, Pinterest, and Google Ads strategy in coordination with external agencies.</li>
+          <li>Delivered strategic reports to leadership, driving ongoing brand and creative optimization.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Dentsu Creative</span>
+          <span class="job-period">2024</span>
+        </div>
+        <div class="job-role">Graphic Designer · Art Director</div>
+        <ul class="job-bullets">
+          <li>Embedded in the <strong>Growth team</strong>, developing graphic assets for web, app, multimedia, newsletters, and all paid channels (Google, Meta, and more) for ImaginBank and Implant.</li>
+          <li>Conceptualized and produced <strong>performance-driven, social-first creatives</strong> for multi-channel brand campaigns with a strong focus on conversion.</li>
+          <li>Applied AI tool pipelines within art direction workflows to ensure visual consistency and high aesthetic quality across all digital and offline assets.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Rose Days / Brand &amp; Creative Consultancy</span>
+          <span class="job-period">2012 – Present</span>
+        </div>
+        <div class="job-role">Founder · Creative Director</div>
+        <ul class="job-bullets">
+          <li>Lead <strong>strategic brand, storytelling, and AI-assisted content projects</strong> for startups and creative teams across Europe and LatAm.</li>
+          <li>Facilitate workshops on brand clarity, voice, and <strong>emerging AI creative tool ecosystems</strong>.</li>
+          <li>Currently building functional <strong>vibe-coded solutions</strong> (Claude, Lovable, Replit) to solve real pain points for clients and internal teams — bridging creative and product thinking.</li>
+          <li>Developing and deploying <strong>AI agents</strong> to automate creative workflows and content operations.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">EventMe (Serbia) / Timeling (Sweden)</span>
+          <span class="job-period">2022 – 2023</span>
+        </div>
+        <div class="job-role">Brand &amp; Design Manager</div>
+        <ul class="job-bullets">
+          <li>Led rebranding and multi-channel design systems (OOH, social, email, digital); drove brand awareness through creative content campaigns.</li>
+          <li>Defined brand strategy; led content and copywriting across website, blog, app, and social, managing cross-border creative teams.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Moca Platform</span>
+          <span class="job-period">2019 – 2021</span>
+        </div>
+        <div class="job-role">Lead Designer · UI/UX</div>
+        <ul class="job-bullets">
+          <li>Led UI/UX design for international digital products across Vietnam, Puerto Rico, and Colombia.</li>
+          <li>Collaborated cross-functionally with product, marketing, and engineering teams in fast-paced startup environments.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Artskool / Co-founder &amp; Creative Director</span>
+          <span class="job-period">2020 – 2022</span>
+        </div>
+        <div class="job-role">EdTech — Social Impact Platform</div>
+        <ul class="job-bullets">
+          <li>Launched social-impact EdTech platform offering paid creative courses and free workshops for children in vulnerable communities.</li>
+          <li>Directed full brand identity, content strategy, and creative vision from 0 to launch.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Creative <em>Skills</em></h2>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Creative</div>
+        <div class="tags">
+          <span class="tag filled">AI Content Production</span>
+          <span class="tag filled">Creative &amp; Art Direction</span>
+          <span class="tag filled">Creative Systems</span>
+          <span class="tag">Visual Storytelling</span>
+          <span class="tag">Generative Media</span>
+          <span class="tag">Brand Identity</span>
+          <span class="tag">Moodboarding</span>
+          <span class="tag">Fashion Concept Dev.</span>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:16px;">
+        <div class="skill-group-label">Brand &amp; Strategy</div>
+        <div class="tags">
+          <span class="tag">Brand Architecture</span>
+          <span class="tag">Content Strategy</span>
+          <span class="tag">Performance Creative</span>
+          <span class="tag">Paid Media Strategy</span>
+          <span class="tag">UGC Programs</span>
+          <span class="tag">Copywriting</span>
+          <span class="tag">Multi-market Ops</span>
+          <span class="tag">Cross-functional Collab</span>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:16px;">
+        <div class="skill-group-label">Technical</div>
+        <div class="tags">
+          <span class="tag">Adobe Creative Suite</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Shopify</span>
+          <span class="tag">Meta · Pinterest Ads</span>
+          <span class="tag">Google Analytics</span>
+          <span class="tag">Notion · Asana</span>
+          <span class="tag">DAM Workflows</span>
+          <span class="tag">Vibe Coding</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <a href="https://rosedays.myportfolio.com" target="_blank" class="portfolio-link">
+      <span class="pl-label">Portfolio</span>
+      <span class="pl-url">rosedays.myportfolio.com ↗</span>
+    </a>
+
+    <div class="tools-box">
+      <div class="tools-label">AI &amp; Creative Tools</div>
+      <div class="tools-grid">
+        <div class="tool-chip">Midjourney</div>
+        <div class="tool-chip">Flora AI</div>
+        <div class="tool-chip">Runway · Kling</div>
+        <div class="tool-chip">Seedance</div>
+        <div class="tool-chip">Nanobanner</div>
+        <div class="tool-chip">Higgsfield</div>
+        <div class="tool-chip">Adobe Firefly</div>
+        <div class="tool-chip">Figma</div>
+        <div class="tool-chip">Claude · ChatGPT</div>
+        <div class="tool-chip">Perplexity</div>
+        <div class="tool-chip">AI Agents</div>
+        <div class="tool-chip">Vibe Coding</div>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title">Awards <em>&amp; Recognition</em></div>
+
+      <div class="award-item">
+        <div class="award-dot"></div>
+        <div class="award-text">
+          <strong>Fantasy Category Winner — House of Prompt 2025</strong>
+          1st &amp; 2nd Place
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-dot"></div>
+        <div class="award-text">
+          <strong>Official Selection — AIMA 2026</strong>
+          Title: Second Skin · Category: Fashion
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-dot"></div>
+        <div class="award-text">
+          <strong>AI Design Awards 2025 — Special Recognition</strong>
+          Motion &amp; Storytelling · Wardrobe of Faith
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-dot"></div>
+        <div class="award-text">
+          <strong>1st Place — Commemorative Logo</strong>
+          UPB 75 Years
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-dot"></div>
+        <div class="award-text">
+          <strong>2nd Place — Startup Weekend Women's Edition 2017</strong>
+          Project: Renta tu estilo
+        </div>
+      </div>
+
+      <div class="award-item">
+        <div class="award-dot"></div>
+        <div class="award-text">
+          <strong>Young Innovator</strong>
+          Latin American Innovation Awards
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title"><em>Education</em></div>
+
+      <div class="edu-item">
+        <div class="edu-school">ESADE · Barcelona</div>
+        <div class="edu-degree">Executive Máster — Brand Management</div>
+        <div class="edu-year">2023</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-school">ELISAVA · Barcelona</div>
+        <div class="edu-degree">Master in Branding</div>
+        <div class="edu-year">2013 – 2014</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-school">UAB · Barcelona</div>
+        <div class="edu-degree">Postgrad — Digital Creative Strategist</div>
+        <div class="edu-year">2019</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-school">TryTriggers · Barcelona</div>
+        <div class="edu-degree">Creative Team Management &amp; Leadership</div>
+        <div class="edu-year">2023</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-school">UPB · Medellín</div>
+        <div class="edu-degree">Fashion &amp; Graphic Design (5-year degree)</div>
+        <div class="edu-year">2005 – 2011</div>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title"><em>Languages</em></div>
+      <div class="lang-row"><span class="lang-name">Spanish</span><span class="lang-lvl">Native</span></div>
+      <div class="lang-row"><span class="lang-name">English</span><span class="lang-lvl">Fluent ✓</span></div>
+      <div class="lang-row"><span class="lang-name">French · Catalan</span><span class="lang-lvl">Basic</span></div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- CHECKERBOARD DIVIDER -->
+<div class="checker-divider"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-sig">Rose Days</div>
+  <div class="footer-note">Available for hybrid roles &nbsp;·&nbsp; Barcelona based &nbsp;·&nbsp; Open to remote</div>
+</footer>
+
+</body>
+</html>
